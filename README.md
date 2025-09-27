@@ -13,7 +13,7 @@ Welcome to my GitHub profile. I'm passionate about building impactful software a
 ## 🛠️ Technologies & Tools
 
 - **Languages:** Python, JavaScript
-- **Frameworks:** Django
+- **Frameworks:** Django, Pytorch
 - **Tools:** Git, VS Code, 
 
 ---
@@ -26,7 +26,7 @@ Welcome to my GitHub profile. I'm passionate about building impactful software a
 
 ## 🌱 About Me
 
-- 🔭 I’m currently working on: [Add your current projects or learning goals]
+- 🔭 I’m currently working on: Automated File Organizer
 - 🌐 I love exploring new technologies and contributing to open-source.
 - 📝 I’m open to collaboration on automation, productivity, or [other domains].
 
@@ -34,7 +34,8 @@ Welcome to my GitHub profile. I'm passionate about building impactful software a
 
 ## 📬 Connect with Me
 
-[Add your social links here: LinkedIn, Twitter, email, website, etc.]
+Linkedin : www.linkedin.com/in/datta-vighnesh-anipeddi-0116192b2
+Email : dattavighneshanipeddi@gmail.com
 
 ---
 
