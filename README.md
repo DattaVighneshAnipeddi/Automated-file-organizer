@@ -1,40 +1,40 @@
- 📂 Project 1: Automated File Organizer
+# 🤖 Project 1: Automated File Organizer 📂
 
- Description
-[cite_start]This project is a **Python command-line utility** designed to automatically organize files within a specified source directory and its subdirectories[cite: 3]. [cite_start]The script identifies files by their extensions and moves them into categorized folders (e.g., "Documents", "Images", "Code")[cite: 4]. [cite_start]It handles edge cases like filename conflicts and logs all operations for operational transparency[cite: 5, 33].
-
----
-
- Key Features
-
-* [cite_start]**Recursive Traversal:** Scans the specified source directory and all its subdirectories for files[cite: 8].
-* **Categorization:** Maps file extensions (defined in the `CATEGORIES` dictionary) to corresponding category folders. [cite_start]Unrecognized extensions are grouped into an **"Other"** folder[cite: 10, 11].
-* [cite_start]**Conflict Resolution:** Resolves duplicate filenames by appending an index to the filename, following the format `report(1).txt` if `report.txt` already exists[cite: 13].
-* [cite_start]**Robust Error Handling:** Gracefully handles OS errors, such as `PermissionError` and `FileNotFoundError`, during file system manipulation[cite: 14, 29].
-* [cite_start]**Logging & Reporting:** Logs all successes, failures, and operational steps with timestamps to an `organizer.log` file[cite: 15, 16]. [cite_start]A summary report is also generated upon completion.
-* [cite_start]**Dry-Run Mode:** Supports a dry-run mode to preview all proposed actions without actually moving or modifying any files[cite: 19, 36].
+A Python command-line utility for **recursive file system management**, designed to automatically scan, categorize, and organize files across a directory tree.
 
 ---
 
- Installation and Setup
+## 🏆 Project Goal & Requirements
 
- Prerequisites
-* Python 3.6+ (or newer)
-* The script uses only standard Python libraries (`argparse`, `logging`, `shutil`, `pathlib`).
+The primary objective is to develop a robust script that demonstrates mastery of core Python I/O, error handling, and CLI development by creating an automated file organization solution.
 
- Files
-1.  Save the Python script as `file_organizer.py`.
-2.  Ensure you have a `.gitignore` file to exclude logs and test directories.
+| Feature | Status | Core Implementation |
+| :--- | :--- | :--- |
+| **Directory Traversal** | Recursive scan using `pathlib.Path.rglob('*')`. |
+| **File Type Detection** | Extension mapping with a default **"Other"** category. |
+| **Conflict Resolution** | Filename conflicts resolved via index: `report(1).txt`. |
+| **Error Handling** | Gracefully handles `PermissionError` and checks for invalid paths. |
+| **Logging & Reporting** | Detailed logs to `organizer.log` and a final console summary report. |
+| **User Experience (CLI)**| Accepts source path via `argparse` and features a `--dry-run` mode. |
 
 ---
 
- How to Run
+## 🚀 Getting Started
 
-The script is executed via the command line and requires the path to the directory you wish to organize.
+### Prerequisites
+* **Python 3.6+** (No external packages required)
 
- 1. Dry-Run Mode (Recommended First)
-Use the `--dry-run` flag to preview exactly which files will be moved. [cite_start]The summary report will still be displayed, and all actions will be logged in `organizer.log` as "DRY-RUN" actions[cite: 19].
+### Execution
 
+The script is executed via the command line, requiring the target directory path as a mandatory argument.
+
+| Mode | Command Syntax | Description |
+| :--- | :--- | :--- |
+| **Dry-Run (Test Run)** | `python file_organizer.py <source_directory_path> --dry-run` | **Simulates all actions** (moves, directory creation) without modifying the file system. |
+| **Live Execution** | `python file_organizer.py <source_directory_path>` | **Executes the organization**, moving files and creating category folders. |
+
+### Example
+
+To run a dry-run on your `Downloads` folder:
 ```bash
-# Example command using the dry-run flag
-python file_organizer.py /path/to/your/downloads/ --dry-run
+python file_organizer.py /Users/username/Downloads --dry-run
